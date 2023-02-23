@@ -2,7 +2,7 @@
 import React from 'react';
 
 // define component 'NavBar' and export it as default
-export default function NavBar({ currentPage, handlePageChange }) {
+export default function Navigation({ currentPage, handlePageChange }) {
   return (
     <li className="nav-item">
       <a 

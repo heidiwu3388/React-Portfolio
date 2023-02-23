@@ -2,7 +2,7 @@
 import React from 'react';
 
 // import user-defined React components
-import NavBar from './NavBar';
+import Navigation from './Navigation';
 
 // define component 'Header' and export it as default
 export default function Header({ currentPage, handlePageChange }) {
@@ -20,7 +20,7 @@ export default function Header({ currentPage, handlePageChange }) {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <NavBar currentPage={currentPage} handlePageChange={handlePageChange}/>
+            <Navigation currentPage={currentPage} handlePageChange={handlePageChange}/>
           </ul>
         </div>
       </div>
