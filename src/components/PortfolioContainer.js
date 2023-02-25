@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 // import user-defined React components
 import Header from './Header';
+import Footer from './Footer';
 import AboutMe from './pages/AboutMe';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
@@ -36,6 +37,7 @@ export default function PortfolioContainer() {
     <div>
       <Header currentPage={currentPage} handlePageChange={handlePageChange}/>
       {renderPage()}
+      <Footer/>
     </div>
   );
 }
