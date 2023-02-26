@@ -39,7 +39,7 @@ export default function Portfolio() {
       <div className="row d-flex px-lg-5 justify-content-center align-items-stretch">
         <Project
           backgroundImage={evChargeNGo}
-          title="EV Change N Go"
+          title="EV Charge N Go"
           githubLink="https://github.com/heidiwu3388/EV-Charge-N-Go"
           deployLink="https://ev-charge-n-go.herokuapp.com/"
         />
