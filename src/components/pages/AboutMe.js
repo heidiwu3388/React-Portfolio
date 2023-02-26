@@ -38,26 +38,26 @@ const styles = {
 // define component 'AboutMe' and export it as default
 export default function AboutMe() {
   return (
-    <div className="container-fluid p-5" style={styles.container}>
+    <div className="container-fluid px-5 py-3" style={styles.container}>
       <div className="row" >
         {/* title */}
-        <div className="col-12">
+        <div className="col-12 d-flex justify-content-center">
           <h1 className='py-3'>
             About Me
           </h1>
         </div>
       </div>
-      <div className="row d-flex align-items-strech">
+      <div className="row d-flex d-flex justify-content-center align-items-stretch">
         {/* photo */}
-        <div className="col-sm-5 col-lg-3 col-xl-2">
-          <div className="mb-4" style={styles.photoContainer}>
+        <div className="col-sm-4 col-lg-3 mb-4">
+          <div className="" style={styles.photoContainer}>
             <img className="rounded" src={aboutMePhoto} alt="aboutMePhoto" style={styles.photo}/>
           </div>
         </div>
         {/* bio */}
-        <div className="col-sm-12 col-lg-5 col-xl-5 d-flex align-items-strech" >
-          <div className="d-flex align-items-center px-4 mb-4" style={styles.bio}>
-            <p>
+        <div className="col-sm-12 col-lg-9 d-flex align-item-stretch mb-4" >
+          <div className="d-flex align-items-center px-4" style={styles.bio}>
+            <p className="fs-xxl-2">
               {`Hi, my name is Heidi Wu. 
               I am a full-stack web developer with a background in computer science 
               and a passion for creating beautiful and functional web applications. 
