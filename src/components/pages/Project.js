@@ -19,6 +19,7 @@ export default function Project({ backgroundImage, title, githubLink, deployLink
       backgroundImage: `url(${backgroundImage})`,
       backgroundPosition: "center",
       backgroundSize: "cover",
+      // set the box shadow
       boxShadow: "15px 15px 10px rgba(0,0,0,0.5)",
     },
     projectTitle: {
