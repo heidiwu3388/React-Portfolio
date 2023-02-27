@@ -1,10 +1,8 @@
 // import dependencies
-import React from 'react';
+import React, {useState} from 'react';
 
 // import images
 import contactBackground from "../../images/contactBackground.jpg";
-console.log(contactBackground);
-
 
 // define styles for 'Contact' component
 const styles = {
@@ -18,9 +16,51 @@ const styles = {
   },
 };
 
-// define component 'Contact' and export it as default
-export default function Contact() {
+// define regex for email validation
+const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
+
+// ********* define component 'Contact' and export it as default *********
+export default function Contact() {
+  const [errorMessage, setErrorMessage] = useState("");
+  
+  // define functions for Name validation
+  function validateName(e) {
+    if (e.target.value.length <= 0) {
+      setErrorMessage("Name is required.");
+    } else {
+      setErrorMessage("");
+    }
+  }
+
+  // define functions for Email validation
+  function validateEmail(e) {
+    const email = e.target.value;
+    if (email.length <= 0) {
+      setErrorMessage("Email is required.");
+    } else if (emailRegex.test(email) === false)
+    {
+      setErrorMessage("Invalid email.");
+    } else {
+      setErrorMessage("");
+    }
+  }
+
+  // define functions for Name validation
+  function validateMessage(e) {
+    if (e.target.value.length <= 0) {
+      setErrorMessage("Message is required.");
+    } else {
+      setErrorMessage("");
+    }
+  }
+
+  // prevent form from submitting
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
+  // return JSX
   return (
     <div className="contain-fluid p-5" style={styles.container}>
         {/* title */}
@@ -32,23 +72,40 @@ export default function Contact() {
           </div>
         </div>
         {/* contact form */}
-        <div className="row p-5" style={styles.contactForm}>
+        <div className="row p-5" style={styles.contactForm} onSubmit={handleSubmit}>
           <form>
             {/* name */}
             <div className="mb-3">
               <label htmlFor="inputName" className="form-label text-white">Name:</label>
-              <input type="text" className="form-control" id="inputName"/>
+              <input 
+                onBlur={validateName}
+                type="text" 
+                className="form-control" 
+                id="inputName"
+              />
             </div>
             {/* email */}
             <div className="mb-3">
               <label htmlFor="inputEmail" className="form-label text-white">Email address:</label>
-              <input type="email" className="form-control" id="inputEmail" placeholder="name@example.com"/>
+              <input
+                onBlur={validateEmail}
+                type="email" 
+                className="form-control" 
+                id="inputEmail" 
+                placeholder="name@example.com"
+              />
             </div>
             {/* message */}
             <div className="mb-3">
               <label htmlFor="inputMessage" className="form-label text-white">Message:</label>
-              <textarea className="form-control" id="inputMessage" rows="3"></textarea>
+              <textarea 
+                onBlur={validateMessage}
+                className="form-control" 
+                id="inputMessage" 
+                rows="3"></textarea>
             </div>
+            {/* error message */}
+            <div className="mb-3 text-danger">{errorMessage}</div>
             {/* submit button */}
             <button type="submit" className="btn btn-primary">Submit</button>
           </form>
