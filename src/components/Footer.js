@@ -18,7 +18,6 @@ const styles = {
 
 // define component 'Footer' and export it as default
 export default function Footer() {
-  console.log("inside Footer component");
   return (
     <div
       className="container-flluid py-3"
