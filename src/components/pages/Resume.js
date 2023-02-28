@@ -18,14 +18,14 @@ const styles = {
     width: "200px",
     backgroundColor:"rgb(18, 35, 153)",
     boxShadow: "5px 5px 2px rgba(0,0,0,0.5)",
-    borderRadius: "25px",
     fontSize: "1rem",
     color: "white",
+    borderRadius: "5px",
   },
   proficiencyList: {
     backgroundColor:"rgb(18, 35, 153)",
     boxShadow: "15px 15px 10px rgba(0,0,0,0.5)",
-    borderRadius: "25px",
+    borderRadius: "5px",
   },
 };
 
@@ -35,7 +35,7 @@ export default function Resume() {
       <div className="container-fluid" style={styles.innerContainer}>
         {/* title */}
         <div className="row" >
-          <div className="col-12 d-flex justify-content-start">
+          <div className="col-12 d-flex justify-content-center">
             <h1 className='py-3 text-white'>
               Resume
             </h1>
@@ -43,7 +43,7 @@ export default function Resume() {
         </div>
         {/* download button */}
         <div className="row">
-          <div className="col-12">
+          <div className="col-12 d-flex justify-content-center">
             <a href={resumePDF} download="Resume_HeidiWu.pdf">
               <button className="mb-4" style={styles.downloadButton}>
                 Download Resume
@@ -52,15 +52,15 @@ export default function Resume() {
           </div>
         </div>
         {/* proficiency list title*/}
-        <div className="row text-white fs-4 px-5 d-flex justify-content-center" >
-          <div className="col-12 text-white fs-4 mb-3 px-2">
+        <div className="row text-white fs-4 px-5" >
+          <div className="col-12 text-white fs-4 mb-3 px-2 d-flex justify-content-center">
             Proficient in:
           </div>
         </div>
         {/* proficiency list*/}
-        <div className="p-3" style={styles.proficiencyList} >
+        <div className="p-4" style={styles.proficiencyList} >
           <div className="row text-white fs-4 d-flex justify-content-between" >
-            <ul className="col-12 col-sm-6 col-md-3 px-5">
+            <ul className="col-12 col-sm-6 col-md-3 px-4">
               <li>HTML</li>
               <li>CSS</li>
               <li>JavaScript</li>
@@ -70,7 +70,7 @@ export default function Resume() {
               <li>APIs</li>
               <li>REST</li>
             </ul>
-            <ul className="col-12 col-sm-6 col-md-3 px-5">
+            <ul className="col-12 col-sm-6 col-md-3 px-4">
               <li>Node.js</li>
               <li>Express.js</li>
               <li>Inquirer</li>
@@ -80,7 +80,7 @@ export default function Resume() {
               <li>Jest</li>
               <li>Express-Session</li>
             </ul>
-            <ul className="col-12 col-sm-6 col-md-3 px-5">
+            <ul className="col-12 col-sm-6 col-md-3 px-4">
               <li>MySQL</li>
               <li>Sequelize</li>
               <li>MongoDB</li>
@@ -88,7 +88,7 @@ export default function Resume() {
               <li>GraphQL</li>
               <li>IndexedDB</li>
             </ul>
-            <ul className="col-12 col-sm-6 col-md-3 px-5">
+            <ul className="col-12 col-sm-6 col-md-3 px-4">
               <li>MERN</li>
               <li>Model-View-Controller</li>
               <li>Git</li>
