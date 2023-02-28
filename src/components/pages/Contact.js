@@ -9,6 +9,9 @@ const styles = {
   container : {
       backgroundImage: `url(${contactBackground})`,
   },
+  innerContainer: {
+    maxWidth: "1200px",
+  },
   contactForm: {
     backgroundColor:"rgb(18, 35, 153)",
     maxWidth:"700px",
@@ -63,53 +66,57 @@ export default function Contact() {
   // return JSX
   return (
     <div className="contain-fluid p-5" style={styles.container}>
+      <div className="container-fluid" style={styles.innerContainer}>
         {/* title */}
         <div className="row" >
-          <div className="col-12 d-flex justify-content-start">
+          <div className="col-12 d-flex justify-content-center">
             <h1 className='py-3 text-white'>
               Contact
             </h1>
           </div>
         </div>
         {/* contact form */}
-        <div className="row p-5" style={styles.contactForm}>
-          <form onSubmit={handleSubmit}>
-            {/* name */}
-            <div className="mb-3">
-              <label htmlFor="inputName" className="form-label text-white">Name:</label>
-              <input 
-                onBlur={validateName}
-                type="text" 
-                className="form-control" 
-                id="inputName"
-              />
-            </div>
-            {/* email */}
-            <div className="mb-3">
-              <label htmlFor="inputEmail" className="form-label text-white">Email address:</label>
-              <input
-                onBlur={validateEmail}
-                type="email" 
-                className="form-control" 
-                id="inputEmail" 
-                placeholder="name@example.com"
-              />
-            </div>
-            {/* message */}
-            <div className="mb-3">
-              <label htmlFor="inputMessage" className="form-label text-white">Message:</label>
-              <textarea 
-                onBlur={validateMessage}
-                className="form-control" 
-                id="inputMessage" 
-                rows="3"></textarea>
-            </div>
-            {/* error message */}
-            <div className="mb-3 text-danger">{errorMessage}</div>
-            {/* submit button */}
-            <button type="submit" className="btn btn-primary">Submit</button>
-          </form>
+        <div className="row d-flex justify-content-center" >
+          <div className="col-12 p-5" style={styles.contactForm}>
+            <form onSubmit={handleSubmit}>
+              {/* name */}
+              <div className="mb-3">
+                <label htmlFor="inputName" className="form-label text-white">Name:</label>
+                <input 
+                  onBlur={validateName}
+                  type="text" 
+                  className="form-control" 
+                  id="inputName"
+                />
+              </div>
+              {/* email */}
+              <div className="mb-3">
+                <label htmlFor="inputEmail" className="form-label text-white">Email address:</label>
+                <input
+                  onBlur={validateEmail}
+                  type="email" 
+                  className="form-control" 
+                  id="inputEmail" 
+                  placeholder="name@example.com"
+                />
+              </div>
+              {/* message */}
+              <div className="mb-3">
+                <label htmlFor="inputMessage" className="form-label text-white">Message:</label>
+                <textarea 
+                  onBlur={validateMessage}
+                  className="form-control" 
+                  id="inputMessage" 
+                  rows="3"></textarea>
+              </div>
+              {/* error message */}
+              <div className="mb-3 text-danger">{errorMessage}</div>
+              {/* submit button */}
+              <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
   );
 }
