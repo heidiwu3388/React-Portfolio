@@ -22,7 +22,8 @@ const styles = {
     position: "relative",
     width: "100%",
     height: 0,
-    paddingBottom: "133.33%"
+    paddingBottom: "133.33%",
+    boxShadow: "15px 15px 10px rgba(0,0,0,0.5)",
   },
   photo: {
     position: "absolute",
@@ -32,35 +33,36 @@ const styles = {
     height: "100%",
   },
   bio: {
-    fontSize: "1.2rem",
-    backgroundColor: "rgba(255,255,255, 0.4)",
-    borderRadius: "10px",
+    fontSize: "1.3rem",
+    color: "white",
+    backgroundColor: "rgb(206, 144, 159)",
+    boxShadow: "15px 15px 10px rgba(0,0,0,0.5)",
   }
 };
 
 // define component 'AboutMe' and export it as default
 export default function AboutMe() {
   return (
-    <div className="container-fluid px-5 py-3" style={styles.container}>
-      <div className="container-fluid" style={styles.innerContainer}>
+    <div className="container-fluid px-2 px-sm-5 py-3 " style={styles.container}>
+      <div className="container-fluid " style={styles.innerContainer}>
         {/* title */}
-        <div className="row" >
+        <div className="row " >
           <div className="col-12 d-flex justify-content-center">
-            <h1 className='py-3'>
+            <h1 className='py-3 text-white'>
               About Me
             </h1>
           </div>
         </div>
-        <div className="row d-flex d-flex justify-content-center align-items-stretch">
+        <div className="row d-flex d-flex justify-content-center align-items-stretch ">
           {/* photo */}
-          <div className="col-sm-4 col-lg-3 mb-4">
+          <div className="col-8 col-sm-6 col-md-5 col-lg-4 mb-4">
             <div className="" style={styles.photoContainer}>
-              <img className="rounded" src={aboutMePhoto} alt="aboutMePhoto" style={styles.photo}/>
+              <img className="" src={aboutMePhoto} alt="aboutMePhoto" style={styles.photo}/>
             </div>
           </div>
           {/* bio */}
-          <div className="col-sm-12 col-lg-9 d-flex align-item-stretch mb-4" >
-            <div className="d-flex align-items-center px-4" style={styles.bio}>
+          <div className="col-12 col-sm-12 col-md-12 col-lg-8 d-flex align-item-stretch mb-4" >
+            <div className="d-flex align-items-center px-3 px-sm-4 py-3 py-sm-4" style={styles.bio}>
               <p className="fs-xxl-2">
                 {`Hi, my name is Heidi Wu. 
                 I am a full-stack web developer with a background in computer science 
