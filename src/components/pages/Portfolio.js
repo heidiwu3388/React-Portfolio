@@ -5,13 +5,13 @@ import React from 'react';
 import Project from './Project';
 
 // import images
-import portfolioBackground from '../../images/portfolioBackground.jpg';
-import evChargeNGo from '../../images/Ev-Charge-N-Go.jpg';
-import letsGoDIY from '../../images/Lets-Go-DIY.jpg';
-import techBlog from '../../images/Tech-Blog.jpg';
-import socialNetworkAPI from '../../images/Social-Network-API.jpg';
-import weatherDashboard from '../../images/Weather-Dashboard.jpg';
-import noteTaker from '../../images/Note-Taker.jpg';
+import portfolioBackground from '../../assets/images/portfolioBackground.jpg';
+import evChargeNGo from '../../assets/images/Ev-Charge-N-Go.jpg';
+import letsGoDIY from '../../assets/images/Lets-Go-DIY.jpg';
+import techBlog from '../../assets/images/Tech-Blog.jpg';
+import socialNetworkAPI from '../../assets/images/Social-Network-API.jpg';
+import weatherDashboard from '../../assets/images/Weather-Dashboard.jpg';
+import noteTaker from '../../assets/images/Note-Taker.jpg';
 
 // define styles for 'Portfolio' component
 const styles = {

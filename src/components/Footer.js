@@ -1,10 +1,10 @@
 // import dependencies
 import React from "react";
 // import images
-import footerBackground from "../images/footerBackground.jpg";
-import githubIcon from "../images/github-mark-white.svg";
-import linkedinIcon from "../images/linkedin.png";
-import stackoverflowIcon from "../images/stackoverflow.png";
+import footerBackground from "../assets/images/footerBackground.jpg";
+import githubIcon from "../assets/images/github-mark-white.svg";
+import linkedinIcon from "../assets/images/linkedin.png";
+import stackoverflowIcon from "../assets/images/stackoverflow.png";
 // define styles for 'Footer' component
 const styles = {
   footerStyle: {

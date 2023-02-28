@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 
 // import images
-import contactBackground from "../../images/contactBackground.jpg";
+import contactBackground from "../../assets/images/contactBackground.jpg";
 
 // define styles for 'Contact' component
 const styles = {
@@ -72,8 +72,8 @@ export default function Contact() {
           </div>
         </div>
         {/* contact form */}
-        <div className="row p-5" style={styles.contactForm} onSubmit={handleSubmit}>
-          <form>
+        <div className="row p-5" style={styles.contactForm}>
+          <form onSubmit={handleSubmit}>
             {/* name */}
             <div className="mb-3">
               <label htmlFor="inputName" className="form-label text-white">Name:</label>

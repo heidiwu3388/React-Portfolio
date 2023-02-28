@@ -1,7 +1,7 @@
 // import dependencies
 import React from 'react';
 // import images
-import headerBackground from '../images/headerBackground.jpg';
+import headerBackground from '../assets/images/headerBackground.jpg';
 // import user-defined React components
 import Navigation from './Navigation';
 

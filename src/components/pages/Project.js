@@ -2,7 +2,7 @@
 import React from 'react';
 
 // import images
-import githubIcon from '../../images/github-mark.svg';
+import githubIcon from '../../assets/images/github-mark.svg';
 
 // define component 'Project' and export it as default
 export default function Project({ backgroundImage, title, githubLink, deployLink }) {
