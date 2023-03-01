@@ -23,12 +23,14 @@ const styles = {
 // define regex for email validation
 const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
-
 // ********* define component 'Contact' and export it as default *********
 export default function Contact() {
-  // define state variable for error message
+  // define state variable
   const [errorMessage, setErrorMessage] = useState("");
-  
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+    
   // define functions for Name validation
   function validateName(e) {
     if (e.target.value.length <= 0) {
@@ -49,6 +51,15 @@ export default function Contact() {
     } else {
       setErrorMessage("");
     }
+  }
+
+  // prevent form submission (real submission will be handled in next stage)
+  function handleSubmit(e) {
+    console.log("Form submitted")
+    e.preventDefault();
+    setName("");
+    setEmail("");
+    setMessage("");
   }
 
   // define functions for Name validation
@@ -75,14 +86,15 @@ export default function Contact() {
         {/* contact form */}
         <div className="row d-flex justify-content-center" >
           <div className="col-12 p-5" style={styles.contactForm}>
-            {/* <form action="https://formsubmit.co/heidiwu3388@yahoo.com" method="POST" onSubmit={handleSubmit}> */}
-            <form action="https://formsubmit.co/162f4368236a5da680574a41a2e905a3" method="POST">
+            <form onSubmit={handleSubmit}>
               {/* name */}
               <div className="mb-3">
                 <label htmlFor="inputName" className="form-label text-white">Name:</label>
                 <input
                   name="name" 
+                  value={name}
                   onBlur={validateName}
+                  onChange={e => setName(e.target.value)}
                   type="text" 
                   className="form-control" 
                   id="inputName"
@@ -94,7 +106,9 @@ export default function Contact() {
                 <label htmlFor="inputEmail" className="form-label text-white">Email address:</label>
                 <input
                   name="email"
+                  value={email}
                   onBlur={validateEmail}
+                  onChange={e => setEmail(e.target.value)}
                   type="email" 
                   className="form-control" 
                   id="inputEmail" 
@@ -107,7 +121,9 @@ export default function Contact() {
                 <label htmlFor="inputMessage" className="form-label text-white">Message:</label>
                 <textarea 
                   name="message"
+                  value={message}
                   onBlur={validateMessage}
+                  onChange={e => setMessage(e.target.value)}
                   className="form-control" 
                   id="inputMessage" 
                   rows="3"
