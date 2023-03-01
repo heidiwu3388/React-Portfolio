@@ -76,7 +76,7 @@ export default function Contact() {
         <div className="row d-flex justify-content-center" >
           <div className="col-12 p-5" style={styles.contactForm}>
             {/* <form action="https://formsubmit.co/heidiwu3388@yahoo.com" method="POST" onSubmit={handleSubmit}> */}
-            <form action="https://formsubmit.co/162f4368236a5da680574a41a2e905a3" method="POST">
+            <form action="https://formsubmit.co/heidiwu3388@yahoo.com" method="POST">
               {/* name */}
               <div className="mb-3">
                 <label htmlFor="inputName" className="form-label text-white">Name:</label>
