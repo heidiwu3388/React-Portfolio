@@ -24,6 +24,7 @@ const styles = {
     height: 0,
     paddingBottom: "133.33%",
     boxShadow: "15px 15px 10px rgba(0,0,0,0.5)",
+    borderRadius: "5px",
   },
   photo: {
     position: "absolute",
@@ -31,12 +32,14 @@ const styles = {
     left: 0,
     width: "100%",
     height: "100%",
+    borderRadius: "5px",
   },
   bio: {
     fontSize: "1.3rem",
     color: "white",
     backgroundColor: "rgb(206, 144, 159)",
     boxShadow: "15px 15px 10px rgba(0,0,0,0.5)",
+    borderRadius: "5px",
   }
 };
 

@@ -16,6 +16,7 @@ const styles = {
     backgroundColor:"rgb(18, 35, 153)",
     maxWidth:"700px",
     boxShadow: "15px 15px 10px rgba(0,0,0,0.5)",
+    borderRadius: "5px",
   },
 };
 

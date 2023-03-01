@@ -21,6 +21,8 @@ export default function Project({ backgroundImage, title, githubLink, deployLink
       backgroundSize: "cover",
       // set the box shadow
       boxShadow: "15px 15px 10px rgba(0,0,0,0.5)",
+      // set the border radius
+      borderRadius: "5px",
     },
     projectTitle: {
       // position the title to lower left corner
@@ -47,7 +49,7 @@ export default function Project({ backgroundImage, title, githubLink, deployLink
       margin: "10px",
       padding: "5px",
     },
-
+    
   };
   return (
     <div className="col-sm-6 col-lg-4 mb-4">
