@@ -4,7 +4,7 @@ import React from 'react';
 // import images
 import githubIcon from '../../assets/images/github-mark.svg';
 
-// define component 'Project' and export it as default
+// ********* define component 'Project' and export it as default *********
 export default function Project({ backgroundImage, title, githubLink, deployLink }) {
   // define styles for 'Project' component
   const styles = {
@@ -51,6 +51,7 @@ export default function Project({ backgroundImage, title, githubLink, deployLink
     },
     
   };
+  // return the JSX for 'Project' component
   return (
     <div className="col-sm-6 col-lg-4 mb-4">
       <div className="" style={styles.projectContainer}>

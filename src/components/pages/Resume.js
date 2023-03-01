@@ -29,6 +29,7 @@ const styles = {
   },
 };
 
+// ********* define component 'Resume' and export it as default *********
 export default function Resume() {
   return (
     <div className="container-fluid p-5 pt-1 d-flex justify-content-center" style={styles.container}>

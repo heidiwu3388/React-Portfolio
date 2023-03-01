@@ -7,7 +7,7 @@ const styles = {
   }
 }
 
-// define component 'NavBar' and export it as default
+// ********* define component 'Navigation' and export it as default ********* 
 export default function Navigation({ currentPage, handlePageChange }) {
   return (
     <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-5 ps-5">

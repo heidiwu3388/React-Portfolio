@@ -26,7 +26,7 @@ const styles = {
   },
 };
 
-// define component 'Portfolio' and export it as default
+// ********* define component 'Portfolio' and export it as default *********
 export default function Portfolio() {
   return (
     <div className="container-fluid px-4 px-sm-5 py-3" style={styles.container}>

@@ -18,7 +18,7 @@ const styles = {
   }
 };
 
-// define component 'Header' and export it as default
+// ********* define component 'Header' and export it as default ********* 
 export default function Header({ currentPage, handlePageChange }) {
   return (
     <div className="container-fluid d-flex justify-content-center" style={styles.container}>

@@ -9,7 +9,7 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 
-// define component 'PortfolioContainer' and export it as default
+// ********* define component 'PortfolioContainer' and export it as default ********* 
 export default function PortfolioContainer() {
   // declare state variables, setter functions and initial values
   const [currentPage, setCurrentPage] = useState('About Me');

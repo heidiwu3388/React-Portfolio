@@ -26,6 +26,7 @@ const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
 // ********* define component 'Contact' and export it as default *********
 export default function Contact() {
+  // define state variable for error message
   const [errorMessage, setErrorMessage] = useState("");
   
   // define functions for Name validation
@@ -64,7 +65,7 @@ export default function Contact() {
     e.preventDefault();
   }
 
-  // return JSX
+  // return JSX for 'Contact' component
   return (
     <div className="contain-fluid p-5" style={styles.container}>
       <div className="container-fluid" style={styles.innerContainer}>

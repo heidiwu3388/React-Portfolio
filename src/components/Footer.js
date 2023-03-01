@@ -16,7 +16,7 @@ const styles = {
   },
 };
 
-// define component 'Footer' and export it as default
+// ********* define component 'Footer' and export it as default ********* 
 export default function Footer() {
   return (
     <div

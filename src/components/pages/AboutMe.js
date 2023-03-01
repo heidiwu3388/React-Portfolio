@@ -43,7 +43,7 @@ const styles = {
   }
 };
 
-// define component 'AboutMe' and export it as default
+// ********* define component 'AboutMe' and export it as default *********
 export default function AboutMe() {
   return (
     <div className="container-fluid px-2 px-sm-5 py-3 " style={styles.container}>
