@@ -60,11 +60,6 @@ export default function Contact() {
     }
   }
 
-  // prevent form from submitting
-  function handleSubmit(e) {
-    e.preventDefault();
-  }
-
   // return JSX for 'Contact' component
   return (
     <div className="contain-fluid p-5" style={styles.container}>
@@ -80,36 +75,44 @@ export default function Contact() {
         {/* contact form */}
         <div className="row d-flex justify-content-center" >
           <div className="col-12 p-5" style={styles.contactForm}>
-            <form onSubmit={handleSubmit}>
+            {/* <form action="https://formsubmit.co/heidiwu3388@yahoo.com" method="POST" onSubmit={handleSubmit}> */}
+            <form action="https://formsubmit.co/162f4368236a5da680574a41a2e905a3" method="POST">
               {/* name */}
               <div className="mb-3">
                 <label htmlFor="inputName" className="form-label text-white">Name:</label>
-                <input 
+                <input
+                  name="name" 
                   onBlur={validateName}
                   type="text" 
                   className="form-control" 
                   id="inputName"
+                  required
                 />
               </div>
               {/* email */}
               <div className="mb-3">
                 <label htmlFor="inputEmail" className="form-label text-white">Email address:</label>
                 <input
+                  name="email"
                   onBlur={validateEmail}
                   type="email" 
                   className="form-control" 
                   id="inputEmail" 
                   placeholder="name@example.com"
+                  required
                 />
               </div>
               {/* message */}
               <div className="mb-3">
                 <label htmlFor="inputMessage" className="form-label text-white">Message:</label>
                 <textarea 
+                  name="message"
                   onBlur={validateMessage}
                   className="form-control" 
                   id="inputMessage" 
-                  rows="3"></textarea>
+                  rows="3"
+                  required
+                />
               </div>
               {/* error message */}
               <div className="mb-3 text-danger">{errorMessage}</div>
