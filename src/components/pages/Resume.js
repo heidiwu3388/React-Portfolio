@@ -37,16 +37,16 @@ export default function Resume() {
         {/* title */}
         <div className="row" >
           <div className="col-12 d-flex justify-content-center">
-            <h1 className='py-3 text-white'>
+            <h1 className='m-3 text-white'>
               Resume
             </h1>
           </div>
         </div>
         {/* download button */}
         <div className="row">
-          <div className="col-12 d-flex justify-content-center">
+          <div className="col-12 mb-3 d-flex justify-content-center">
             <a href={resumePDF} download="Resume_HeidiWu.pdf">
-              <button className="mb-4" style={styles.downloadButton}>
+              <button style={styles.downloadButton}>
                 Download Resume
               </button>
             </a>
@@ -55,50 +55,74 @@ export default function Resume() {
         {/* proficiency list title*/}
         <div className="row text-white fs-4 px-5" >
           <div className="col-12 text-white fs-4 mb-3 px-2 d-flex justify-content-center">
-            Proficient in:
+            Proficiencies:
           </div>
         </div>
         {/* proficiency list*/}
         <div className="p-4" style={styles.proficiencyList} >
-          <div className="row text-white fs-4 d-flex justify-content-between" >
-            <ul className="col-12 col-sm-6 col-md-3 px-4">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>JQuery</li>
-              <li>Bootstrap</li>
-              <li>React</li>
-              <li>APIs</li>
-              <li>REST</li>
-            </ul>
-            <ul className="col-12 col-sm-6 col-md-3 px-4">
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>Inquirer</li>
-              <li>Handlebars</li>
-              <li>Bcrypt</li>
-              <li>Dotenv</li>
-              <li>Jest</li>
-              <li>Express-Session</li>
-            </ul>
-            <ul className="col-12 col-sm-6 col-md-3 px-4">
-              <li>MySQL</li>
-              <li>Sequelize</li>
-              <li>MongoDB</li>
-              <li>Mongoose</li>
-              <li>GraphQL</li>
-              <li>IndexedDB</li>
-            </ul>
-            <ul className="col-12 col-sm-6 col-md-3 px-4">
-              <li>MERN</li>
-              <li>Model-View-Controller</li>
-              <li>Git</li>
-              <li>GitHub</li>
-              <li>Heroku</li>
-              <li>VS Code</li>
-              <li>Object-Oriented Programming</li>
-              <li>Responsive Web Design</li>
-            </ul>  
+          <div className="row text-white d-flex justify-content-between" >
+            {/* front-end */}
+            <div className="col-12 col-sm-6 col-md-3 px-4">
+              <div className="text-white-50 fs-3 mb-3">
+                Front-End:
+              </div>
+              <ul className="text-white fs-5">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>JQuery</li>
+                <li>Bootstrap</li>
+                <li>React</li>
+                <li>APIs</li>
+                <li>Responsive Web Design</li>
+              </ul>
+            </div>
+            {/* back-end */}
+            <div className="col-12 col-sm-6 col-md-3 px-4">
+              <div className="text-white-50 fs-3 mb-3">
+                Back-End:
+              </div>
+              <ul className="text-white fs-5">
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>Inquirer</li>
+                <li>Handlebars</li>
+                <li>Bcrypt</li>
+                <li>Dotenv</li>
+                <li>Jest</li>
+                <li>Express-Session</li>
+              </ul>
+            </div>
+            {/* database */}
+            <div className="col-12 col-sm-6 col-md-3 px-4">
+              <div className="text-white-50 fs-3 mb-3">
+                Database:
+              </div>
+              <ul className="text-white fs-5">
+                <li>MySQL</li>
+                <li>Sequelize</li>
+                <li>MongoDB</li>
+                <li>Mongoose</li>
+                <li>GraphQL</li>
+                <li>IndexedDB</li>
+              </ul>
+            </div>
+            {/* other */}
+            <div className="col-12 col-sm-6 col-md-3 px-4">
+              <div className="text-white-50 fs-3 mb-3">
+                Other:
+              </div>
+              <ul className="text-white fs-5">
+                <li>MERN</li>
+                <li>Model-View-Controller</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Heroku</li>
+                <li>VS Code</li>
+                <li>Object-Oriented Programming</li>
+                
+              </ul>
+            </div>  
           </div>
         </div>  
       </div>  
