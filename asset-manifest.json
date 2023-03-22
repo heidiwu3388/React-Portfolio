@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/React-Portfolio/static/css/main.c2cab247.css",
-    "main.js": "/React-Portfolio/static/js/main.0185d44e.js",
+    "main.js": "/React-Portfolio/static/js/main.bb674b62.js",
     "static/media/aboutMePhoto.jpg": "/React-Portfolio/static/media/aboutMePhoto.219d319028652938ee66.jpg",
     "static/media/Weather-Dashboard.jpg": "/React-Portfolio/static/media/Weather-Dashboard.038b113855f664370873.jpg",
-    "static/media/Social-Network-API.jpg": "/React-Portfolio/static/media/Social-Network-API.78e45466cac81a0d71e5.jpg",
     "static/media/footerBackground.jpg": "/React-Portfolio/static/media/footerBackground.a995693a509c05768964.jpg",
     "static/media/headerBackground.jpg": "/React-Portfolio/static/media/headerBackground.a995693a509c05768964.jpg",
     "static/media/Lets-Go-DIY.jpg": "/React-Portfolio/static/media/Lets-Go-DIY.017304d3b961b9be578f.jpg",
@@ -15,16 +14,17 @@
     "static/media/resumeBackground.jpg": "/React-Portfolio/static/media/resumeBackground.566554c1c6d8bc310df1.jpg",
     "static/media/aboutMeBackground.jpg": "/React-Portfolio/static/media/aboutMeBackground.884b22075a236cf6901b.jpg",
     "static/media/Ev-Charge-N-Go.jpg": "/React-Portfolio/static/media/Ev-Charge-N-Go.2410fb61976eb0854bf3.jpg",
+    "static/media/Parent-Helper-Hub.png": "/React-Portfolio/static/media/Parent-Helper-Hub.60e21b7743a617fd900a.png",
     "static/media/Resume_HeidiWu.pdf": "/React-Portfolio/static/media/Resume_HeidiWu.bf02280409ba1aa51753.pdf",
     "static/media/linkedin.png": "/React-Portfolio/static/media/linkedin.3fbcdcdee5f831aaafae.png",
     "static/media/github-mark.svg": "/React-Portfolio/static/media/github-mark.6fa18895f6e6c7772cab7049f7e05f59.svg",
     "static/media/github-mark-white.svg": "/React-Portfolio/static/media/github-mark-white.97ed8e7eef60d61ca469881dd6f34511.svg",
     "index.html": "/React-Portfolio/index.html",
     "main.c2cab247.css.map": "/React-Portfolio/static/css/main.c2cab247.css.map",
-    "main.0185d44e.js.map": "/React-Portfolio/static/js/main.0185d44e.js.map"
+    "main.bb674b62.js.map": "/React-Portfolio/static/js/main.bb674b62.js.map"
   },
   "entrypoints": [
     "static/css/main.c2cab247.css",
-    "static/js/main.0185d44e.js"
+    "static/js/main.bb674b62.js"
   ]
 }
