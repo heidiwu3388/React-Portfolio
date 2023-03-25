@@ -45,8 +45,8 @@ export default function Portfolio() {
           <Project
             backgroundImage={parentHelperHub}
             title="Parent Helper Hub"
-            githubLink="https://github.com/cmarielorber/parent-helper-hub"
-            deployLink="https://parent-helper-hub.herokuapp.com/"
+            githubLink="https://github.com/heidiwu3388/heidi-parent-helper-hub"
+            deployLink="https://heidi-parent-helper-hub.herokuapp.com/"
           />
           <Project
             backgroundImage={evChargeNGo}
