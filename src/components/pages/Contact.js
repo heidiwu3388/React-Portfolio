@@ -1,5 +1,6 @@
 // import dependencies
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
+import emailjs from '@emailjs/browser';
 
 // import images
 import contactBackground from "../../assets/images/contactBackground.jpg";
@@ -30,7 +31,10 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-    
+
+  // define ref variable
+  const contactForm = useRef();
+  
   // define functions for Name validation
   function validateName(e) {
     if (e.target.value.length <= 0) {
@@ -39,7 +43,7 @@ export default function Contact() {
       setErrorMessage("");
     }
   }
-
+  
   // define functions for Email validation
   function validateEmail(e) {
     const email = e.target.value;
@@ -52,11 +56,20 @@ export default function Contact() {
       setErrorMessage("");
     }
   }
-
+  
   // prevent form submission (real submission will be handled in next stage)
   function handleSubmit(e) {
-    console.log("Form submitted")
     e.preventDefault();
+
+    // send email
+    emailjs.sendForm('service_gsy0otj', 'template_fusqr3n', contactForm.current, 'MReoIMdizU_-UULVc')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+
+    // reset form
     setName("");
     setEmail("");
     setMessage("");
@@ -86,7 +99,7 @@ export default function Contact() {
         {/* contact form */}
         <div className="row d-flex justify-content-center" >
           <div className="col-12 p-5" style={styles.contactForm}>
-            <form onSubmit={handleSubmit}>
+            <form ref={contactForm} onSubmit={handleSubmit}>
               {/* name */}
               <div className="mb-3">
                 <label htmlFor="inputName" className="form-label text-white">Name:</label>
