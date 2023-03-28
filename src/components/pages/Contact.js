@@ -1,6 +1,8 @@
 // import dependencies
 import React, {useState, useRef} from 'react';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // import images
 import contactBackground from "../../assets/images/contactBackground.jpg";
@@ -62,17 +64,32 @@ export default function Contact() {
     e.preventDefault();
 
     // send email
-    emailjs.sendForm('service_gsy0otj', 'template_fusqr3n', contactForm.current, 'MReoIMdizU_-UULVc')
+    emailjs.sendForm('service_2bpu4x2', 'template_fusqr3n', contactForm.current, 'MReoIMdizU_-UULVc')
     .then((result) => {
         console.log(result.text);
-    }, (error) => {
+        toast.success('You message has been sent to Heidi!', {
+          closeButton: true,
+          autoClose: false,
+          position: toast.POSITION.TOP_CENTER,
+          hideProgressBar: true,
+        });
+        // reset form
+        setName("");
+        setEmail("");
+        setMessage("");
+      }, (error) => {
         console.log(error.text);
-    });
-
-    // reset form
-    setName("");
-    setEmail("");
-    setMessage("");
+        toast.success(`Failed to send your message: ${error.text}`, {
+          closeButton: true,
+          autoClose: false,
+          position: toast.POSITION.TOP_CENTER,
+          hideProgressBar: true,
+        });
+        // reset form
+        setName("");
+        setEmail("");
+        setMessage("");
+      });
   }
 
   // define functions for Name validation
@@ -88,6 +105,8 @@ export default function Contact() {
   return (
     <div className="contain-fluid p-5" style={styles.container}>
       <div className="container-fluid" style={styles.innerContainer}>
+        {/* infomation popup */}
+        <ToastContainer />
         {/* title */}
         <div className="row" >
           <div className="col-12 d-flex justify-content-center">
