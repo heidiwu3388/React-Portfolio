@@ -29,6 +29,7 @@ const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 // ********* define component 'Contact' and export it as default *********
 export default function Contact() {
   // define state variable
+  const [isSubmitting, setIsSubmitting] = useState(false); // disable submit button when submitting
   const [errorMessage, setErrorMessage] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -62,7 +63,8 @@ export default function Contact() {
   // prevent form submission (real submission will be handled in next stage)
   function handleSubmit(e) {
     e.preventDefault();
-
+    // disable submit button
+    setIsSubmitting(true);
     // send email
     emailjs.sendForm('service_2bpu4x2', 'template_fusqr3n', contactForm.current, 'MReoIMdizU_-UULVc')
     .then((result) => {
@@ -77,6 +79,8 @@ export default function Contact() {
         setName("");
         setEmail("");
         setMessage("");
+        // enable submit button
+        setIsSubmitting(false);
       }, (error) => {
         console.log(error.text);
         toast.success(`Failed to send your message: ${error.text}`, {
@@ -89,6 +93,8 @@ export default function Contact() {
         setName("");
         setEmail("");
         setMessage("");
+        // enable submit button
+        setIsSubmitting(false);
       });
   }
 
@@ -165,7 +171,7 @@ export default function Contact() {
               {/* error message */}
               <div className="mb-3 text-danger">{errorMessage}</div>
               {/* submit button */}
-              <button type="submit" className="btn btn-primary">Submit</button>
+              <button type="submit" className="btn btn-primary" disabled={isSubmitting}>Submit</button>
             </form>
           </div>
         </div>
