@@ -24,6 +24,10 @@ export default function PortfolioContainer() {
             element={<AboutMe />}
           />
           <Route
+            path='/React-Portfolio'
+            element={<AboutMe />}
+          />
+          <Route
             path='/Portfolio'
             element={<Portfolio />}
           />
