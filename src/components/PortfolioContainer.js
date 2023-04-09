@@ -1,5 +1,6 @@
 // import dependencies
-import React, { useState } from 'react';
+import React from 'react';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
 // import user-defined React components
 import Header from './Header';
@@ -11,33 +12,32 @@ import Resume from './pages/Resume';
 
 // ********* define component 'PortfolioContainer' and export it as default ********* 
 export default function PortfolioContainer() {
-  // declare state variables, setter functions and initial values
-  const [currentPage, setCurrentPage] = useState('About Me');
-  
-  // define function to render page based on 'currentPage' state
-  function renderPage() {
-    if (currentPage === "About Me") {
-      return <AboutMe />;
-    }
-    if (currentPage === "Portfolio") {
-      return <Portfolio />;
-    }
-    if (currentPage === "Contact") {
-      return <Contact />;
-    }
-    return <Resume />;
-  };
-  // define function to handle page changes
-  function handlePageChange(page) {
-    setCurrentPage(page);
-  }
   
   // return JSX for 'PortfolioContainer'
   return (
     <div>
-      <Header currentPage={currentPage} handlePageChange={handlePageChange}/>
-      {renderPage()}
+      <Router>
+        <Header/>
+        <Routes>
+          <Route
+            path='/'
+            element={<AboutMe />}
+          />
+          <Route
+            path='/Portfolio'
+            element={<Portfolio />}
+          />
+          <Route
+            path='/Contact'
+            element={<Contact />}
+          />
+          <Route
+            path='/Resume'
+            element={<Resume/>}
+          />
+        </Routes>
       <Footer/>
+      </Router>
     </div>
   );
 }

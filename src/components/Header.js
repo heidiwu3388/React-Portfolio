@@ -18,8 +18,10 @@ const styles = {
   }
 };
 
+
 // ********* define component 'Header' and export it as default ********* 
-export default function Header({ currentPage, handlePageChange }) {
+export default function Header() {
+  
   return (
     <div className="container-fluid d-flex justify-content-center" style={styles.container}>
       <div className="container-fluid" style={styles.innerContainer}>
@@ -35,7 +37,7 @@ export default function Header({ currentPage, handlePageChange }) {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent" >
-              <Navigation currentPage={currentPage} handlePageChange={handlePageChange}/>
+              <Navigation/>
             </div>
           </div>
         </nav>
