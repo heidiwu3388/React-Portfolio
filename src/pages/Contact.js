@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 // import images
-import contactBackground from "../../assets/images/contactBackground.jpg";
+import contactBackground from "../assets/images/contactBackground.jpg";
 
 // define styles for 'Contact' component
 const styles = {
@@ -115,10 +115,22 @@ export default function Contact() {
         <ToastContainer />
         {/* title */}
         <div className="row" >
-          <div className="col-12 d-flex justify-content-center">
-            <h1 className='py-3 text-white'>
+          <div className="col-12 d-flex flex-column align-items-center">
+            <h1 className='text-white'>
               Contact
             </h1>
+            <p className='text-white'>
+              email me at
+            </p>
+            <h2 className='text-white'>
+              heidiwu3388@yahoo.com
+            </h2>
+            <p className='text-white'>
+              or
+            </p>
+            <p className='text-white'>
+              fill in the following form
+            </p>
           </div>
         </div>
         {/* contact form */}
@@ -127,7 +139,7 @@ export default function Contact() {
             <form ref={contactForm} onSubmit={handleSubmit}>
               {/* name */}
               <div className="mb-3">
-                <label htmlFor="inputName" className="form-label text-white">Name:</label>
+                <label htmlFor="inputName" className="form-label text-white">Your name:</label>
                 <input
                   name="name" 
                   value={name}
@@ -141,7 +153,7 @@ export default function Contact() {
               </div>
               {/* email */}
               <div className="mb-3">
-                <label htmlFor="inputEmail" className="form-label text-white">Email address:</label>
+                <label htmlFor="inputEmail" className="form-label text-white">Your email address:</label>
                 <input
                   name="email"
                   value={email}

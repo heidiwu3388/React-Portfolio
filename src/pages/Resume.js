@@ -2,8 +2,8 @@
 import React from 'react';
 
  // import images & pdf
-import resumeBackground from "../../assets/images/resumeBackground.jpg";
-import resumePDF from "../../assets/pdf/Resume_HeidiWu.pdf";
+import resumeBackground from "../assets/images/resumeBackground.jpg";
+import resumePDF from "../assets/pdf/Resume_HeidiWu.pdf";
 
 // define styles for 'Resume' component
 const styles = {

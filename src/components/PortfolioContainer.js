@@ -5,10 +5,10 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 // import user-defined React components
 import Header from './Header';
 import Footer from './Footer';
-import AboutMe from './pages/AboutMe';
-import Portfolio from './pages/Portfolio';
-import Contact from './pages/Contact';
-import Resume from './pages/Resume';
+import AboutMe from '../pages/AboutMe';
+import Portfolio from '../pages/Portfolio';
+import Contact from '../pages/Contact';
+import Resume from '../pages/Resume';
 
 // ********* define component 'PortfolioContainer' and export it as default ********* 
 export default function PortfolioContainer() {

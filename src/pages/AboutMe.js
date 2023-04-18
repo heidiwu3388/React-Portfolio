@@ -2,8 +2,8 @@
 import React from 'react';
 
 // import images
-import aboutMeBackground from "../../assets/images/aboutMeBackground.jpg";
-import aboutMePhoto from "../../assets/images/aboutMePhoto.jpg";
+import aboutMeBackground from "../assets/images/aboutMeBackground.jpg";
+import aboutMePhoto from "../assets/images/aboutMePhoto.jpg";
 
 
 // define styles for 'AboutMe' component
