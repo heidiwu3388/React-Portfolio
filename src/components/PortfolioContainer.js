@@ -16,27 +16,28 @@ export default function PortfolioContainer() {
   // return JSX for 'PortfolioContainer'
   return (
     <div>
-      <Router>
+      <Router basename='/React-Portfolio'>
         <Header/>
         <Routes>
         <Route
-            path='/React-Portfolio'
+            exact
+            path='/'
             element={<AboutMe />}
           />
           <Route
-            path='/React-Portfolio/AboutMe'
+            path='/AboutMe'
             element={<AboutMe />}
           />
           <Route
-            path='/React-Portfolio/Portfolio'
+            path='/Portfolio'
             element={<Portfolio />}
           />
           <Route
-            path='/React-Portfolio/Contact'
+            path='/Contact'
             element={<Contact />}
           />
           <Route
-            path='/React-Portfolio/Resume'
+            path='/Resume'
             element={<Resume/>}
           />
         </Routes>

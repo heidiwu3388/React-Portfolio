@@ -20,7 +20,7 @@ export default function Navigation() {
     <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-5 ps-5">
       <li className="nav-item mx-2">
         <Link 
-          to="/React-Portfolio/AboutMe"
+          to="/AboutMe"
           aria-current="page" 
           onClick={()=>handlePageChange("About Me")}
           className={currentPage === "About Me" ? "nav-link active" : "nav-link"}
@@ -31,7 +31,7 @@ export default function Navigation() {
       </li>
       <li className="nav-item mx-2">
         <Link 
-          to="/React-Portfolio/Portfolio"
+          to="/Portfolio"
           aria-current="page" 
           onClick={()=>handlePageChange("Portfolio")}
           className={currentPage === "Portfolio" ? "nav-link active" : "nav-link"}
@@ -42,7 +42,7 @@ export default function Navigation() {
       </li>
       <li className="nav-item mx-2">
         <Link 
-          to="/React-Portfolio/Contact"
+          to="/Contact"
           aria-current="page" 
           onClick={()=>handlePageChange("Contact")}
           className={currentPage === "Contact" ? "nav-link active" : "nav-link"}
@@ -53,7 +53,7 @@ export default function Navigation() {
       </li>
       <li className="nav-item mx-2">
         <Link
-          to="/React-Portfolio/Resume"
+          to="/Resume"
           aria-current="page" 
           onClick={()=>handlePageChange("Resume")}
           className={currentPage === "Resume" ? "nav-link active" : "nav-link"}

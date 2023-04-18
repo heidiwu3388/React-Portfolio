@@ -27,7 +27,7 @@ export default function Header() {
       <div className="container-fluid" style={styles.innerContainer}>
         <nav className="navbar navbar-expand-lg navbar-dark py-5">
           <div className="container-fluid">
-            <a className="navbar-brand me-5" href="#Heidi" style={styles.nameStyle}>Heidi Wu</a>
+            <a className="navbar-brand me-5" href="#Heidi" style={styles.nameStyle}>Heidi Wu 1.8</a>
             <button className="navbar-toggler" 
               type="button" data-bs-toggle="collapse" 
               data-bs-target="#navbarSupportedContent" 
